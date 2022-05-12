@@ -95,6 +95,7 @@ ul li {
 img, fieldset {
 	border: none;
 	vertical-align: top;
+	background-color: white;
 }
 hr {
 	display: none;
@@ -2326,10 +2327,12 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 }
 .list-type-thumbnail .post-item .thum img {
 	float: right;
-	width: 180px;
-	height: 180px;
+	width:  165px;
+	height: 165px;
 	margin-left: 57px;
-	border: 1px solid transparent;
+	border: 5px solid black;
+	background-color: white;
+	padding: 8px;
 	transform: translateY(0);
 	-webkit-transform: translateY(0);
 	-ms-transform: translateY();
