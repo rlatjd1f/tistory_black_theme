@@ -95,7 +95,7 @@ ul li {
 img, fieldset {
 	border: none;
 	vertical-align: top;
-	background-color: white;
+	/* background-color: white; */
 }
 hr {
 	display: none;
