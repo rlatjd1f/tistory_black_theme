@@ -253,7 +253,7 @@ a:active {text-decoration:none;}
 	overflow: hidden;
 	width: 32px;
 	height: 32px;
-	border: 1px solid #eee;
+	border: 0px solid #eee;
 	border-radius: 50%;
 }
 #header .util .profile img {
