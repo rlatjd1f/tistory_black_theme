@@ -1742,7 +1742,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	float: left;
 	width: 46px;
 	margin: -2px 0 0 -60px;
-	border: 1px solid #eee;
+	border: 0px solid #eee;
 	border-radius: 50%;
 }
 .comment-list ul li .author-meta .control {
@@ -1805,8 +1805,8 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 .comment-list ul li ul {
 	margin: 28px 0 -32px 0;
 	padding: 26px 0 21px;
-	border-top: 1px solid #eee;
-	background-color: #fafafa;
+	border-top: 0px solid #eee;
+	background-color: #202124;
 }
 .comment-list ul li ul li {
 	padding: 14px 0 15px 60px;
@@ -3234,12 +3234,12 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 }
 
 .markdown-body h3 {
-  font-size: 1.35em;
+  font-size: 1.4em;
   color: chartreuse;
 }
 
 .markdown-body h4 {
-  font-size: 1.15em;
+  font-size: 1.2em;
   color: gold;
 }
 
