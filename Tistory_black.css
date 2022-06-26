@@ -3235,7 +3235,8 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 
 .markdown-body h3 {
   font-size: 1.4em;
-  color: chartreuse;
+  color: white;
+  /* color: chartreuse; */
 }
 
 .markdown-body h4 {
