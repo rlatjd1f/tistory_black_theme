@@ -3926,7 +3926,7 @@ p {}
 .markdown-body img {
   max-width: 100%;
   box-sizing: initial;
-  background-color: #fff;
+  background-color: white;
 }
 
 .markdown-body img[align=right] {
@@ -3954,7 +3954,7 @@ p {}
   margin: 0;
   font-size: 100%;
   word-break: normal;
-  white-space: pre;
+  white-space: pre-wrap;
   background: transparent;
   border: 0;
 }
