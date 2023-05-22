@@ -180,7 +180,7 @@ a:active {text-decoration:none;}
 	float: left;
 	overflow: visible;
 	width: 32px;
-	background-color: #fff;
+	background-color: transparent;
 	box-sizing: border-box;
 	transition: width 0.5s;
 	-webkit-transition: width 0.5s;
@@ -207,7 +207,7 @@ a:active {text-decoration:none;}
 	height: 32px;
 	padding: 5px 15px;
 	border: 0;
-	background-color: transparent;
+	background-color: white;
 	font-size: 0.875em;
 	line-height: 1;
 	outline: none;
@@ -283,7 +283,7 @@ a:active {text-decoration:none;}
 	text-decoration: none;
 	font-size: 0.875em;
 	line-height: 2.3125rem;
-	color: white;
+	color: black;
 }
 #header .util .profile ul li a:focus,
 #header .util .profile ul li a:hover {
@@ -1541,12 +1541,12 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 .entry-content ul li {
 	position: relative;
 	margin-bottom: 10px;
-	padding-left: 22px;
+	padding-left: 0px;
 	font-size: 0.96em;
 	/*font-size: 0.9375em;*/
 	line-height: 1.5714;
 	color: white;
-	text-indent: -22px;
+	text-indent: 0px;
 	list-style: inherit;
 }
 .entry-content ol {
@@ -1960,7 +1960,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	font-weight: 600;
 }
 .sidebar .category ul li a {
-	color: white;
+	color: cornsilk;
 }
 .sidebar .category ul li a:hover {
 	color: white;
@@ -1972,6 +1972,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	padding: 6px 0 7px;
 	font-weight: 400;
 	font-size: 1em;
+	font-family: 'Hahmlet-Bold';
 }
 .sidebar .category ul li ul li ul {
 	overflow: hidden;
@@ -3243,7 +3244,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 
 .markdown-body h3 {
   font-size: 1.4em;
-  color: white;
+  color: gold;
   /* color: chartreuse; */
 }
 
