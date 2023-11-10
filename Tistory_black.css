@@ -44,6 +44,14 @@
     font-style: normal;
 }
 
+/* Pretendard-Regular */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 @import url('//fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
 /* Type Selector Reset */
 body {
@@ -175,16 +183,29 @@ a:active {text-decoration:none;}
 	top: 24px;
 	right: 0;
 }
-#header .util .search {
+
+/* 검색창 div */
+.sidebar .search.on {
 	position: relative;
-	float: left;
-	overflow: visible;
-	width: 32px;
-	background-color: transparent;
-	box-sizing: border-box;
-	transition: width 0.5s;
-	-webkit-transition: width 0.5s;
+	width: 95%;
+	margin: 0 0 15px 0;
+	border: 2px solid gray;
+	padding: 10px;
 }
+
+
+/* 검색창 icon */
+.sidebar .search.on .fa-solid.fa-magnifying-glass {
+	font-weight: 900;
+	margin-right: 5px;
+}
+
+/* 검색창 input */
+.sidebar .search.on .input-text {
+	height: 1.8em;
+	width: 85%;
+}
+
 #header .util .search:before {
 	content: "";
 	position: absolute;
@@ -234,7 +255,7 @@ a:active {text-decoration:none;}
 	outline: none;
 }
 #header .util .search.on {width: 200px;}
-/* #header .util .search.on:before {content: none;} */
+#header .util .search.on:before {content: none;}
 #header .util .search.on input {
 	display: block;
 	width: 100%;
@@ -344,7 +365,7 @@ a:active {text-decoration:none;}
 	padding: 0 20px;
 }
 #container .content-wrap:before {
-	content: "";
+	/* content: ""; */
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -467,6 +488,9 @@ a:active {text-decoration:none;}
 }
 #tt-body-page #container {
 	padding-top: 339px;
+}
+#tt-body-page blockquote {
+	margin: 10px 0px 10px 0px;
 }
 #tt-body-page.post-cover-hide #container {
 	padding-top: 0;
@@ -1487,7 +1511,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	color: #000;
 	border-bottom:2px solid gray;
 	border-left:10px solid gray;
-	padding: 5px 15px;	
+	padding: 5px 15px;
 }
 .entry-content h3 {
 	clear: both;
@@ -1504,15 +1528,14 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	line-height: 1.5;
 	color: #000;
 }
-.entry-content a {
-	color: #04beb8;
-}
+/* .entry-content a { */
+	/* color: #04beb8; */
+/* } */
 .entry-content p {
-	margin-bottom: 32px;
 	word-break: break-all;
-	/* font-size: 0.9375em; */
-	font-size: 0.98em;
-	line-height: 2;
+	font-family: 'Pretendard-Regular', sans-serif;
+	font-weight: 400;
+	font-size: 1.05rem;
 	color: white;
 }
 .entry-content p img {
@@ -1542,8 +1565,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	position: relative;
 	margin-bottom: 10px;
 	padding-left: 0px;
-	font-size: 0.96em;
-	/*font-size: 0.9375em;*/
 	line-height: 1.5714;
 	color: white;
 	text-indent: 0px;
@@ -1585,6 +1606,8 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 }
 .entry-content blockquote p:first-child {
 	margin-top: 0;
+	color: lightgray;
+	font-style: italic;
 }
 .entry-content table {
 	width:100%;
@@ -1601,7 +1624,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	border-left: 1px solid #e6e6e6;
 }
 .entry-content table tbody td {
-	padding:7px 0 11px;
+	padding: 5px;
 	border-left: 1px solid #e6e6e6;
 	border-top: 1px solid #e6e6e6;
 }
@@ -1953,6 +1976,9 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 
 .sidebar .category {
 	margin-bottom: 36px;
+	border: solid 2px gray;
+	padding: 15px 0 15px 15px;
+	width: 268px;
 }
 .sidebar .category ul li {
 	padding: 0;
@@ -1961,6 +1987,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 }
 .sidebar .category ul li a {
 	color: cornsilk;
+	font-size: 1.2em;
 }
 .sidebar .category ul li a:hover {
 	color: white;
@@ -1985,7 +2012,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	padding: 3px 0 3px 9px;
 	/* border-left: 2px solid #eee; */
 	font-size: 0.8125rem;
-	
+
 }
 .sidebar .category ul li ul li ul li:before {
 	content: "";
@@ -2232,6 +2259,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	padding: 0 !important;
 	border-bottom: 0 !important;
 	font-size: 0.875em !important;
+	color: white;
 }
 #content .another_category table {
 	margin: 0 !important;
@@ -3179,18 +3207,18 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	max-width: 740px;
 	margin: 30px auto
 }
-.markdown-body { 
-	box-sizing: border-box; 
-	min-width: 200px; 
-	max-width: 980px; 
-	margin: 0 auto; 
-	padding: 45px; 
-} 
+.markdown-body {
+	box-sizing: border-box;
+	min-width: 200px;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 45px;
+}
 
-@media (max-width: 767px) { 
-	.markdown-body { 
-		padding: 15px; 
-	} 
+@media (max-width: 767px) {
+	.markdown-body {
+		padding: 15px;
+	}
 }
 
 
@@ -3343,14 +3371,14 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 }
 
 
-.markdown-body b { 
+.markdown-body b {
 	color: #fa3425;
-} 
+}
 
-.markdown-body strong { 
+.markdown-body strong {
 	color: deepskyblue;
 	font-weight: 600;
-} 
+}
 
 .markdown-body hr {
   box-sizing: initial;
@@ -3385,6 +3413,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 .markdown-body a {
   color: #0366d6;
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
 .markdown-body a:hover {
@@ -3439,12 +3468,13 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 
 .markdown-body p {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 1.05rem;
   line-height: 2;
 }
 
 .markdown-body blockquote {
   margin: 0;
+  font-size: 0.95em;
 }
 
 .markdown-body ol,
@@ -3828,7 +3858,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 .markdown-body details,
 .markdown-body dl,
 .markdown-body ol,
-.markdown-body p,
 .markdown-body pre,
 .markdown-body table,
 .markdown-body ul {
@@ -3875,6 +3904,8 @@ p {}
 
 .markdown-body li {
   word-wrap: break-all;
+  font-family: 'Pretendard-Regular', sans-serif;
+  font-size: 1rem;
 }
 
 .markdown-body li>p {
@@ -3919,7 +3950,7 @@ p {}
 
 .markdown-body table td,
 .markdown-body table th {
-  padding: 6px 13px;
+  padding: 5px;
   border: 1px solid #dfe2e5;
 }
 
@@ -3951,6 +3982,9 @@ p {}
   padding: .2em .4em;
   margin: 0;
   font-size: 85%;
+  /*padding: .2em .2em;*/
+  /*margin-right: 4px;*/
+  /*font-size: 90%;*/
   /* background-color: rgba(27,31,35,.05); */
   background-color: white;
   color: black;
@@ -4148,3 +4182,22 @@ p {}
 }
 
 .entry-content .tt_article_useless_p_margin p { margin-bottom:16px !important;}
+
+/* 구글 애드센스 */
+.adsbygoogle {
+	margin: 50px 0 50px 0;
+}
+
+/* 카테고리 글 더보기 */
+body .another_category,
+body .another_category h4, 
+body .another_category h4 a,
+body .another_category * {
+    color: white !important; /* 폰트 색상 */
+    border-color:white !important; /* 테두리 색상 */
+}
+
+/* 구독 버튼 */
+.menu_toolbar .txt_tool_id {
+	color: black;
+}
