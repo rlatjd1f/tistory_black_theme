@@ -52,6 +52,14 @@
     font-style: normal;
 }
 
+/* D2Coding */
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @import url('//fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
 /* Type Selector Reset */
 body {
@@ -187,7 +195,7 @@ a:active {text-decoration:none;}
 /* 검색창 div */
 .sidebar .search.on {
 	position: relative;
-	width: 95%;
+	/* width: 95%; */
 	margin: 0 0 15px 0;
 	border: 2px solid gray;
 	padding: 10px;
@@ -1571,17 +1579,17 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	list-style: inherit;
 }
 .entry-content ol {
-	list-style: decimal inside;
+	list-style: decimal;
 	margin-bottom: 22px;
 }
 .entry-content ol li {
 	position: relative;
 	margin-bottom: 10px;
-	padding-left: 16px;
-	font-size: 0.9375em;
+	padding-left: 0px;
+	/* font-size: 0.9375em; */
 	line-height: 1.5714;
 	color: white;
-	text-indent: -15px;
+	text-indent: 0px;
 	list-style: inherit;
 }
 .entry-content img.alignleft {
@@ -1978,7 +1986,8 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	margin-bottom: 36px;
 	border: solid 2px gray;
 	padding: 15px 0 15px 15px;
-	width: 268px;
+	font-family: 'Hahmlet-Bold';
+	/* width: 268px; */
 }
 .sidebar .category ul li {
 	padding: 0;
@@ -1999,7 +2008,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	padding: 6px 0 7px;
 	font-weight: 400;
 	font-size: 1em;
-	font-family: 'Hahmlet-Bold';
 }
 .sidebar .category ul li ul li ul {
 	overflow: hidden;
@@ -3363,14 +3371,44 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
   border-style: none;
 }
 
-.markdown-body code,
-.markdown-body kbd,
 .markdown-body pre {
-  font-family: monospace,monospace;
-  font-size: 1em;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
+.markdown-body pre code {
+	font-size: 0.95rem;
+	font-family: 'D2Coding';
+	display: inline;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: initial;
+	border: 0;
+}
 
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body code {
+	font-size: 1rem;
+	font-family: 'D2Coding';
+	padding: 0.2rem;
+	margin: 0 0.2rem 0 0;
+	background-color: white;
+	border-radius: 3px;
+	color: black;
+}
+  
 .markdown-body b {
 	color: #fa3425;
 }
@@ -3498,17 +3536,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 
 .markdown-body dd {
   margin-left: 0;
-}
-
-.markdown-body code,
-.markdown-body pre {
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-  font-size: 12px;
-}
-
-.markdown-body pre {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .markdown-body input::-webkit-inner-spin-button,
@@ -3858,7 +3885,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 .markdown-body details,
 .markdown-body dl,
 .markdown-body ol,
-.markdown-body pre,
 .markdown-body table,
 .markdown-body ul {
   margin-top: 0;
@@ -3910,6 +3936,7 @@ p {}
 
 .markdown-body li>p {
   margin-top: 0px;
+  margin-bottom: 5px;
 }
 
 .markdown-body li+li {
@@ -3978,33 +4005,6 @@ p {}
   padding-right: 20px;
 }
 
-.markdown-body code {
-  padding: .2em .4em;
-  margin: 0;
-  font-size: 85%;
-  /*padding: .2em .2em;*/
-  /*margin-right: 4px;*/
-  /*font-size: 90%;*/
-  /* background-color: rgba(27,31,35,.05); */
-  background-color: white;
-  color: black;
-  border-radius: 3px;
-}
-
-.markdown-body pre {
-  word-wrap: normal;
-}
-
-.markdown-body pre>code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre-wrap;
-  background: transparent;
-  border: 0;
-}
-
 .markdown-body .highlight {
   margin-bottom: 16px;
 }
@@ -4012,28 +4012,6 @@ p {}
 .markdown-body .highlight pre {
   margin-bottom: 0;
   word-break: normal;
-}
-
-.markdown-body .highlight pre,
-.markdown-body pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
-}
-
-.markdown-body pre code {
-  display: inline;
-  max-width: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: initial;
-  border: 0;
 }
 
 .markdown-body .commit-tease-sha {
