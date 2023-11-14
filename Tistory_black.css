@@ -2614,9 +2614,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 		transition: left .5s;
 		-webkit-transition: right .5s;
 	}
-	#aside .close {
-
-	}
+	
 	#aside .close {
 		position: absolute;
 		top: 24px;
@@ -3890,8 +3888,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
   margin-top: 0;
   margin-bottom: 5px;
 }
-
-p {}
 
 .markdown-body hr {
   height: .25em;

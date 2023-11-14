@@ -39,7 +39,7 @@
     <!--<title>개발과 일상</title>-->
     <title>[##_page_title_##]</title>
     <link rel="stylesheet" href="./style.css">
-    <!link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css" rel="stylesheet"> -->
         <script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>
         <!-- 구글 애드센스 -->
         <script async
@@ -54,28 +54,28 @@
                 wcs_do();
             }
         </script>
-        <style type="text/css">
-            <s_if_var_point-color>.entry-content a,
-            .post-header h1 em,
-            .comments h2 .count {
-                color: [##_var_point-color_##]
-            }
+        <!-- <style type="text/css"> -->
+            <!-- <s_if_var_point-color>.entry-content a, -->
+            <!-- .post-header h1 em, -->
+            <!-- .comments h2 .count { -->
+                <!-- color: [##_var_point-color_##] -->
+            <!-- } -->
 
-            .comment-form .submit button:hover,
-            .comment-form .submit button:focus {
-                background-color: [##_var_point-color_##]
-            }
+            <!-- .comment-form .submit button:hover, -->
+            <!-- .comment-form .submit button:focus { -->
+                <!-- background-color: [##_var_point-color_##] -->
+            <!-- } -->
 
-            </s_if_var_point-color><s_if_var_promotion-1-btn-color>.main-slider ul li:nth-child(1) .btn {
-                background-color: [##_var_promotion-1-btn-color_##]
-            }
+            <!-- </s_if_var_point-color><s_if_var_promotion-1-btn-color>.main-slider ul li:nth-child(1) .btn { -->
+                <!-- background-color: [##_var_promotion-1-btn-color_##] -->
+            <!-- } -->
 
-            </s_if_var_promotion-1-btn-color><s_if_var_promotion-1-btn-hover-color>.main-slider ul li:nth-child(1) .btn:hover {
-                background-color: [##_var_promotion-1-btn-hover-color_##]
-            }
+            <!-- </s_if_var_promotion-1-btn-color><s_if_var_promotion-1-btn-hover-color>.main-slider ul li:nth-child(1) .btn:hover { -->
+                <!-- background-color: [##_var_promotion-1-btn-hover-color_##] -->
+            <!-- } -->
 
-            </s_if_var_promotion-1-btn-hover-color>
-        </style>
+            <!-- </s_if_var_promotion-1-btn-hover-color> -->
+        <!-- </style> -->
 </head>
 
 <body id="[##_body_id_##]"
@@ -614,98 +614,6 @@
                             </s_article_rep>
 
                         </div>
-
-                        <s_tag>
-                            <div class="post-header">
-                                <h1>태그</h1>
-                            </div>
-                            <div class="tags">
-                                <s_tag_rep>
-                                    <a href="[##_tag_link_##]">[##_tag_name_##]</a>
-                                </s_tag_rep>
-                            </div>
-                        </s_tag>
-
-                        <s_guest>
-                            <div class="comments">
-                                <div class="post-header">
-                                    <h1>방명록</h1>
-                                </div>
-
-                                <s_guest_input_form>
-                                    <div class="comment-form">
-                                        <s_guest_member>
-                                            <div class="field">
-                                                <s_guest_form>
-                                                    <input type="text" name="[##_guest_input_name_##]" placeholder="이름"
-                                                        value="[##_guest_name_##]">
-                                                    <input type="password" name="[##_guest_input_password_##]"
-                                                        placeholder="암호" value="[##_guest_password_##]">
-                                                </s_guest_form>
-                                            </div>
-                                        </s_guest_member>
-                                        <textarea name="[##_guest_textarea_body_##]" cols="" rows="4"
-                                            placeholder="여러분의 소중한 댓글을 입력해주세요."></textarea>
-                                        <div class="submit">
-                                            <button type="submit" class="btn"
-                                                onclick="[##_guest_onclick_submit_##]">등록</button>
-                                        </div>
-                                    </div>
-                                </s_guest_input_form>
-
-                                <s_guest_container>
-                                    <div class="comment-list">
-                                        <ul>
-                                            <s_guest_rep>
-                                                <li>
-                                                    <div class="author-meta">
-                                                        <img src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif"
-                                                            class="avatar" alt="프로필사진">
-                                                        <span class="nickname">[##_guest_rep_name_##]</span>
-                                                        <span class="date">[##_guest_rep_date_##]</span>
-                                                        <span class="control">
-                                                            <button type="button">더보기</button>
-                                                            <div class="link">
-                                                                <a href="#"
-                                                                    onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a>
-                                                            </div>
-                                                        </span>
-                                                    </div>
-                                                    <p>[##_guest_rep_desc_##]<br>
-                                                        <a href="#" class="reply"
-                                                            onclick="[##_guest_rep_onclick_reply_##]">답변</a>
-                                                    </p>
-                                                    <s_guest_reply_container>
-                                                        <ul>
-                                                            <s_guest_reply_rep>
-                                                                <li>
-                                                                    <div class="author-meta">
-                                                                        <img src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif"
-                                                                            class="avatar" alt="프로필사진">
-                                                                        <span
-                                                                            class="nickname">[##_guest_rep_name_##]</span>
-                                                                        <span class="date">[##_guest_rep_date_##]</span>
-                                                                        <span class="control">
-                                                                            <button type="button">더보기</button>
-                                                                            <div class="link">
-                                                                                <a href="#"
-                                                                                    onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a>
-                                                                            </div>
-                                                                        </span>
-                                                                    </div>
-                                                                    <p>[##_guest_rep_desc_##]</p>
-                                                                </li>
-                                                            </s_guest_reply_rep>
-                                                        </ul>
-                                                    </s_guest_reply_container>
-                                                </li>
-                                            </s_guest_rep>
-                                        </ul>
-                                    </div>
-                                </s_guest_container>
-                            </div>
-                        </s_guest>
-
                         <s_paging>
                             <div class="pagination">
                                 <a [##_prev_page_##] class="prev [##_no_more_prev_##]">이전</a>
