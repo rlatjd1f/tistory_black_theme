@@ -3356,10 +3356,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
   display: list-item;
 }
 
-.markdown-body a {
-  background-color: initial;
-}
-
 .markdown-body a:active,
 .markdown-body a:hover {
   outline-width: 0;
@@ -3447,14 +3443,15 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 }
 
 .markdown-body a {
-  color: #0366d6;
-  text-decoration: none;
+  color: #33de4d;
   font-size: 1.1rem;
+  border-bottom: solid 1px white;
+  padding-bottom: 1px;
 }
 
-.markdown-body a:hover {
-  text-decoration: underline;
-}
+/* .markdown-body a:hover { */
+  /* text-decoration: underline; */
+/* } */
 
 .markdown-body hr {
   height: 0;
