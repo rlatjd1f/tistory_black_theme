@@ -1,137 +1,154 @@
 <div class="markdown-body">
+    <h1>[Spring] 의존관계 주입(Dependency Injection) 개념과 Bean 중복방지</h1>
     <p>&nbsp;</p>
-<table>
-<thead>
-<tr><th style='width: 20%;'>이름</th><th>드랍 몬스터</th></tr>
-</thead>
-<tbody>
-<tr><td>귀 장식 민첩 주문서 10% </td><td>파풀라투스, 다크 예티와 페페, 피아누스, 하프, 리셀스퀴드, 클라크, 레이지 버피</td></tr>
-<tr><td>귀 장식 민첩 주문서 100%</td><td>프로토타입로드, 블러드 하프, 벨라모아, 스카이세이버, 호걸, 스톤볼</td></tr>
-<tr><td>귀 장식 민첩 주문서 60% </td><td>혼테일, 릴리노흐, 후회의 신관, 파워암슈트B, 바이킹, 강화된 미스릴 뮤테, 비급, 라바나, 다크 주니어 예티, 아이스 드레이크</td></tr>
-<tr><td>귀 장식 지력 주문서 10%</td><td>후회의 수호병, 다크코니언, 다크 와이번, 웨어울프, 그리프, 드래고니카, 클라크, 크림슨 발록, D.로이, 트리플 루모, 타이머, 주니어 씰, 노란 왕도깨비, 킹 블록퍼스, 스카이세이버, 세르프, 엘리쟈, 화이트예티와 페페킹, 마노</td></tr>
-<tr><td>귀 장식 지력 주문서 60% </td><td>오버로드A, 대왕지네, 콜드샤크, 키메라, 게비알, 레이지 버피, 묘선, 구미호, 세르프, 엘리쟈, 라바나, 총리대신, 스켈레톤 지휘관, 화이트예티와 페페킹, 파우스트, 스톤 마스크, 머쉬맘, 마노</td></tr>
-<tr><td>귀 장식 체력 주문서 10%</td><td>다크 예티와 페페, 마뇽, 자쿰, 원공, 아이스 드레이크, 스켈레톤 장교</td></tr>
-<tr><td>귀 장식 체력 주문서 100%</td><td>망둥이, 루모, 플라티안, 러스터픽시</td></tr>
-<tr><td>귀 장식 체력 주문서 60%</td><td>스켈로스, 도도, 키메라, 레쉬, 세르프, 라바나, 헥터, 파이어봄</td></tr>
-<tr><td>귀 장식 행운 주문서 10%</td><td>암슈트S, 스노우맨, 듀얼 버크, 로이드, 그류핀, 와일드카고</td></tr>
-<tr><td>귀 장식 행운 주문서 100%</td><td>D.로이, 벨라모아, 트릭스터, 루나픽시, 레드 드레이크</td></tr>
-<tr><td>귀 장식 행운 주문서 60% </td><td>릴리노흐, 추억의 사제, 파워암슈트A, 로비, 파풀라투스, 붉은 켄타우로스, 자쿰, 딥 버푼, 다크 레쉬, 라바나, 주니어 예티</td></tr>
-<tr><td>망토 마나 주문서 10%</td><td>네펜데스</td></tr>
-<tr><td>망토 마나 주문서 100%</td><td>암슈트D, 마스터 데스테니, 빨간 달팽이</td></tr>
-<tr><td>망토 마나 주문서 60%</td><td>요괴선사, 태륜, 데비존, 구미호, 파이어봄, 골드예티와 페페킹, 루팡, 스텀피</td></tr>
-<tr><td>망토 마법방어력 주문서 10%</td><td>듀얼 비틀, 로얄 카투스, 타이머, 총리대신, 파우스트, 킹크랑, 리게이터, 스티지</td></tr>
-<tr><td>망토 마법방어력 주문서 60%</td><td>스노우맨, 파이렛, 대왕지네, 샤크, 버피, 태륜, 렉스, 장난감 목마, 네펜데스, 다크 드레이크, 골드예티와 페페킹, 다일, 스텀피, 머쉬맘, 달팽이</td></tr>
-<tr><td>망토 물리방어력 주문서 10%</td><td>예티와 페페, 하프, 호문스큘러, 요괴선사, 바나드 그레이, 스타픽시, 스톤볼</td></tr>
-<tr><td>망토 물리방어력 주문서 60% </td><td>스켈로스, 대왕지네, 데우, 크라피, 고급 앰프, 싸구려 앰프, 락 스피릿, 다크 드레이크, 흘러간 가요 CD, 최신곡 CD, 남자 마네킹, 여자 마네킹, 아이 마네킹, 블루 퍼퓸, 옐로우 퍼퓸, 핑크 퍼퓸, 그레이예티와 페페킹, 골드예티와 페페킹, 스텀피, 머쉬맘, 버블링, 무루무루</td></tr>
-<tr><td>망토 민첩 주문서 10%</td><td>예티와 페페, 엘리쟈</td></tr>
-<tr><td>망토 민첩 주문서 100%</td><td>키요, 티키, 슬라임, 무루피아</td></tr>
-<tr><td>망토 민첩 주문서 60% </td><td>파풀라투스, 키메라, 아이언 뮤테, 프리져, 엘리쟈, 라바나, 헥터</td></tr>
-<tr><td>망토 지력 주문서 10%</td><td>주니어 불독, 스노우맨, 구미호, 핑크테니, 라이오너, 러스터픽시, 총리대신, 골드예티와 페페킹, 파우스트, 스텀피</td></tr>
-<tr><td>망토 지력 주문서 100%</td><td>버블링</td></tr>
-<tr><td>망토 지력 주문서 60% </td><td>파풀라투스, 스노우맨, 데스테니, 키메라, 제노, 타이머, 구미호, 라바나, 아이스 스톤볼, 스톤볼, 총리대신, 골드예티와 페페킹, 화이트예티와 페페킹, 파우스트, 우드 마스크, 스텀피, 마노</td></tr>
-<tr><td>망토 체력 주문서 10%</td><td>망각의 수호병, 이루워터, 스노우맨, 골드 슬라임, 헹키, 호브, 렉스, 세르프, 다일, 스텀프</td></tr>
-<tr><td>망토 체력 주문서 100%</td><td>파란 달팽이</td></tr>
-<tr><td>망토 체력 주문서 60% </td><td>키메라, 데우, 초록 왕도깨비, 세르프, 엘리쟈, 고급 앰프, 싸구려 앰프, 락 스피릿, 흘러간 가요 CD, 최신곡 CD, 남자 마네킹, 여자 마네킹, 아이 마네킹, 블루 퍼퓸, 옐로우 퍼퓸, 핑크 퍼퓸, 그레이예티와 페페킹, 스포아</td></tr>
-<tr><td>망토 행운 주문서 10%</td><td>네스트골렘, 예티와 페페, 도라지, 블록퍼스, 호걸, 그류핀</td></tr>
-<tr><td>망토 행운 주문서 100% </td><td>불독, 레드 슬라임, 실버 슬라임, 돼지</td></tr>
-<tr><td>망토 행운 주문서 60%</td><td>망각의 신관, 파이어독, 블루 드래곤터틀, 파풀라투스, 팬텀워치, 다크 예티, 콜드샤크, 버푼, 키메라, 마스터 소울테니, 태륜, 라바나, 킹크랑</td></tr>
-<tr><td>망토 힘 주문서 10% </td><td>암슈트S, 플라이아이, 듀얼 버크, 스톤버그, 다크 네펜데스, 머미독</td></tr>
-<tr><td>망토 힘 주문서 100%</td><td>샐리온, 스타픽시</td></tr>
-<tr><td>망토 힘 주문서 60% </td><td>스켈로스, 로비, 파풀라투스, 딥 버푼, 샤크, 키메라, 타이머, 라바나, 킹크랑, 엄티</td></tr>
-<tr><td>방패 방어력 주문서 10%</td><td>라이칸스로프, 기간틱 바이킹, 그리프, 드래고니카, 크림슨 발록, 비틀, 벨라모아, 롬바드, 구미호, 트위터, 스타픽시, 킹크랑, 주니어 네키, 이상한 돼지, 리본 돼지</td></tr>
-<tr><td>방패 방어력 주문서 100%</td><td>트릭스터, 씨클</td></tr>
-<tr><td>방패 방어력 주문서 60% </td><td>브레스튼, 스노우맨, 검은 켄타우로스, 대왕지네, 샤크, 태륜, 네오 휴로이드, 천록, 강화된 미스릴 뮤테, 훈련용 짚인형, 호저, 포이즌 푸퍼, 블록골렘, 호돌이, 화이트팽, 총리대신, 골드예티와 페페킹, 파우스트, 우드 마스크, 믹스골렘, 스텀피, 머쉬맘</td></tr>
-<tr><td>방패 체력 주문서 10%</td><td>데스테니, 천록, 아이스 드레이크, 총리대신, 스켈레톤 장교, 화이트예티와 페페킹, 파우스트, 믹스골렘, 마노</td></tr>
-<tr><td>방패 체력 주문서 100%</td><td>귀마개 프릴드, 로보토이, 장난감 목마, 파이어 스톤볼</td></tr>
-<tr><td>방패 체력 주문서 60%</td><td>릴리노흐, 추억의 수호병, 다크 예티와 페페, 스노우맨, 핀호브, 늙은 도라지, 비급, 훈련용 짚인형</td></tr>
-<tr><td>방패 행운 주문서 10%</td><td>레드 드래곤터틀, 그리프, 클라크, 묘선, 훈련용 짚인형, 제노, 주니어 예티</td></tr>
-<tr><td>방패 행운 주문서 100%</td><td>데스테니, 네오 휴로이드, 팬더테니, 엄티, 아이언보어</td></tr>
-<tr><td>방패 행운 주문서 60%</td><td>망각의 사제, 스켈로스, 도도, 블루 와이번, 게이트키퍼, 피아누스, 파이렛, 소울테니, 그류핀</td></tr>
-<tr><td>방패 힘 주문서 10%</td><td>라이칸스로프, 호문쿨루, 호문, 타이머, 구미호, 샐리온, 주니어 예티</td></tr>
-<tr><td>방패 힘 주문서 100% </td><td>파워암슈트B, 바이킹, 본피쉬, 처프, 그린 트릭스터, 스켈독</td></tr>
-<tr><td>방패 힘 주문서 60% </td><td>릴리노흐, 후회의 사제, 콜드샤크, 키메라, 훈련용 나무인형, 울트라 그레이, 마스터 크로노스, 킹 블록골렘, 총리대신, 파우스트</td></tr>
-<tr><td>블레이드 공격력 주문서 10% </td><td>렉스</td></tr>
-<tr><td>블레이드 공격력 주문서 60% </td><td>렉스</td></tr>
-<tr><td>상의 방어력 주문서 10%</td><td>마이너 좀비, 그리프, 드래고니카, 크림슨 발록, 요괴선사, 다크 리티, 골드예티와 페페킹, 화이트예티와 페페킹, 스텀피, 마노, 스텀프</td></tr>
-<tr><td>상의 방어력 주문서 100%</td><td>무루파</td></tr>
-<tr><td>상의 방어력 주문서 60%</td><td>블루 와이번, G.팬텀워치, 피아누스, 대왕지네, 본피쉬, 키요, 타이머, 틱톡, 데비존, 깨비, 엘리쟈, 씨코, 페페, 다크 드레이크, 화이트예티와 페페킹, 머쉬맘, 마노</td></tr>
-<tr><td>상의 체력 주문서 10%</td><td>키메라, 소울테니, 로이드, 훈련용 짚인형, 크립, 드레이크, 좀비 머쉬맘</td></tr>
-<tr><td>상의 체력 주문서 100%</td><td>콜드샤크, 붉은 모래난쟁이, 호저, 흰 모래토끼, 삼미호</td></tr>
-<tr><td>상의 체력 주문서 60%</td><td>혼테일, 파풀라투스, 버푼, 게비알, 망둥이, 천록, 타우로마시스</td></tr>
-<tr><td>상의 행운 주문서 10%</td><td>기간틱 바이킹, 팬텀워치, 레드 슬라임, 캡틴, 구미호, 루이넬, 클랑, 머쉬맘</td></tr>
-<tr><td>상의 행운 주문서 100% </td><td>듀얼 비틀, 도라지, 러스터픽시, 스켈레톤 장교, 로랑</td></tr>
-<tr><td>상의 행운 주문서 60% </td><td>그린코니언, 크림슨 발록, 늙은 도라지, 네오 휴로이드, 제노, 머미독, 다크 스톤골렘</td></tr>
-<tr><td>상의 힘 주문서 10%</td><td>뉴트주니어, 마이너 좀비, 파풀라투스, 주니어 발록, 루이넬, 다크 페페, 머미독</td></tr>
-<tr><td>상의 힘 주문서 100%</td><td>트리플 루모, 포이즌 푸퍼, 씨코, 월묘, 스켈레톤 장교</td></tr>
-<tr><td>상의 힘 주문서 60% </td><td>혼테일, 오버로드A, 기간틱 바이킹, 데스테니, 페페, 스켈레톤 지휘관, 화이트예티와 페페킹, 마노</td></tr>
-<tr><td>신발 이동속도 주문서 10%</td><td>그리프, 드래고니카, 크림슨 발록</td></tr>
-<tr><td>신발 이동속도 주문서 60% </td><td>네스트골렘, 추억의 신관, 프로토타입로드, 블러드 하프, 대왕지네, 요괴선사, 제노, 제타 그레이, 프랑켄로이드, 엘리쟈, 총리대신, 파우스트, 킹크랑, 머쉬맘</td></tr>
-<tr><td>신발 점프력 주문서 10%</td><td>게이트키퍼, 레드 슬라임, 그리프, 드래고니카, 캡틴, 크림슨 발록, 레쉬, 태륜, 청화사, 주니어 카투스, 세르프, 월묘, 루나픽시, 리티, 스켈독, 시니컬한 주황버섯, 주황버섯</td></tr>
-<tr><td>신발 점프력 주문서 100%</td><td>붉은 켄타우로스, 블랙 라츠</td></tr>
-<tr><td>신발 점프력 주문서 60% </td><td>대왕지네, 타이머, 푸퍼, 세르프, 킹크랑, 머쉬맘</td></tr>
-<tr><td>신발 회피 주문서 10%</td><td>타나토스, 그리프, 드래고니카, 크림슨 발록, 요괴선사, 렉스, 킹크랑, 다일, 돼지</td></tr>
-<tr><td>신발 회피 주문서 60%</td><td>후회의 수호병, 레드 와이번, 스노우맨, 대왕지네, 스퀴드, 요괴선사, 파란 왕도깨비, 구미호, 마스크피쉬, 브라운테니, 버블피쉬, 골드예티와 페페킹, 중독된 돼지, 스텀피, 머쉬맘</td></tr>
-<tr><td>악세서리 마나 주문서 70%</td><td>멜론맛 버블티, 망고맛 버블티, 체리맛 버블티</td></tr>
-<tr><td>악세서리 민첩 주문서 30%</td><td>드래곤 라이더, 락 스피릿</td></tr>
-<tr><td>악세서리 민첩 주문서 70% </td><td>고급 앰프, 싸구려 앰프, 락 스피릿, 흘러간 가요 CD, 최신곡 CD, 남자 마네킹, 여자 마네킹, 아이 마네킹, 블루 퍼퓸, 옐로우 퍼퓸, 핑크 퍼퓸</td></tr>
-<tr><td>악세서리 지력 주문서 30%</td><td>드래곤 라이더, 락 스피릿</td></tr>
-<tr><td>악세서리 지력 주문서 70%</td><td>고급 앰프, 싸구려 앰프, 락 스피릿, 흘러간 가요 CD, 최신곡 CD, 남자 마네킹, 여자 마네킹, 아이 마네킹, 블루 퍼퓸, 옐로우 퍼퓸, 핑크 퍼퓸</td></tr>
-<tr><td>악세서리 체력 주문서 70%</td><td>멜론맛 버블티, 망고맛 버블티, 체리맛 버블티</td></tr>
-<tr><td>악세서리 행운 주문서 30%</td><td>드래곤 라이더, 락 스피릿</td></tr>
-<tr><td>악세서리 행운 주문서 70%</td><td>고급 앰프, 싸구려 앰프, 락 스피릿, 흘러간 가요 CD, 최신곡 CD, 남자 마네킹, 여자 마네킹, 아이 마네킹, 블루 퍼퓸, 옐로우 퍼퓸, 핑크 퍼퓸</td></tr>
-<tr><td>악세서리 힘 주문서 30%</td><td>드래곤 라이더, 락 스피릿</td></tr>
-<tr><td>악세서리 힘 주문서 70% </td><td>고급 앰프, 싸구려 앰프, 락 스피릿, 흘러간 가요 CD, 최신곡 CD, 남자 마네킹, 여자 마네킹, 아이 마네킹, 블루 퍼퓸, 옐로우 퍼퓸, 핑크 퍼퓸</td></tr>
-<tr><td>장갑 공격력 주문서 10% </td><td>스켈레곤, 마뇽, 붉은 켄타우로스, 드래고니카, 크림슨 발록, 태륜, 세르프, 파이어 스톤볼, 엄티</td></tr>
-<tr><td>장갑 공격력 주문서 60% </td><td>스노우맨, 대왕지네, 리셀스퀴드, 소울테니, 네오 휴로이드, 천록, 제노, 렉스, 타이머, 플래툰 크로노스, 플라티안, 마티안, 구미호, 세르프, 호돌이, 주니어 예티, 스켈레톤 장교, 킹크랑, 다일, 믹스골렘, 머쉬맘</td></tr>
-<tr><td>장갑 민첩 주문서 10%</td><td>타나토스, 그리프, 드래고니카, 클라크, 크림슨 발록, 울트라 그레이, 킹크랑, 다크 스텀프</td></tr>
-<tr><td>장갑 체력 주문서 10%</td><td>라이칸스로프, 검은 켄타우로스, 버푼, 태륜, 비급, 훈련용 나무인형, 타이머</td></tr>
-<tr><td>장갑 체력 주문서 100% </td><td>암슈트D, 마스터 데스테니, 모래거인, 흑저, 와일드카고, 이블아이, 무루피아</td></tr>
-<tr><td>장갑 체력 주문서 60%</td><td>후회의 신관, 레비아탄, 레드 슬라임, 마뇽, 하프, 캡틴, 레쉬, 스켈독, 믹스골렘</td></tr>
-<tr><td>전신 갑옷 민첩 주문서 10%</td><td>드래곤 라이더, 그리프, 파이렛, 드래고니카, 크림슨 발록, 타이머, 마스터 로보, 데비존, 골드예티와 페페킹, 스텀피, 빨간 달팽이</td></tr>
-<tr><td>전신 갑옷 민첩 주문서 100% </td><td>무루쿤</td></tr>
-<tr><td>전신 갑옷 민첩 주문서 60%</td><td>망각의 수호대장, 다크코니언, 스노우맨, 피아누스, 대왕지네, 키메라, 본피쉬, 데우, 렉스, 카투스, 구미호, 깨비, 플라워 피쉬, 고급 앰프, 싸구려 앰프, 락 스피릿, 흘러간 가요 CD, 최신곡 CD, 남자 마네킹, 여자 마네킹, 아이 마네킹, 블루 퍼퓸, 옐로우 퍼퓸, 핑크 퍼퓸, 그레이예티와 페페킹, 화이트예티와 페페킹, 다일, 머쉬맘, 히죽대는 고스텀프, 고스텀프, 마노</td></tr>
-<tr><td>전신 갑옷 방어력 주문서 10%</td><td>드래곤 라이더, 그리프, 드래고니카, 다크 레쉬, 크림슨 발록, 데비존</td></tr>
-<tr><td>전신 갑옷 방어력 주문서 60%</td><td>피아누스, 대왕지네, 키메라, 요괴선사, 강화된 아이언 뮤테, 훈련용 나무인형, 홍화사, 데우, 프랑켄로이드, 킹 블록골렘, 노란 왕도깨비, 러스터픽시, 고급 앰프, 싸구려 앰프, 락 스피릿, 흘러간 가요 CD, 최신곡 CD, 남자 마네킹, 여자 마네킹, 아이 마네킹, 블루 퍼퓸, 옐로우 퍼퓸, 핑크 퍼퓸, 멜론맛 버블티, 총리대신, 망고맛 버블티, 체리맛 버블티, 그레이예티와 페페킹, 파우스트, 머쉬맘</td></tr>
-<tr><td>전신 갑옷 지력 주문서 10%</td><td>드래곤 라이더, 요괴선사, 태륜, 총리대신, 파우스트</td></tr>
-<tr><td>전신 갑옷 지력 주문서 100%</td><td>혼테일, 타나토스, 다크 예티와 페페, 골드 슬라임, 자쿰, 호브, 스퀴드</td></tr>
-<tr><td>전신 갑옷 지력 주문서 60% </td><td>오버로드B, 그리프, 피아누스, 다크 클라크, 키메라, 본피쉬, 구미호, 킹크랑</td></tr>
-<tr><td>전신 갑옷 행운 주문서 10%</td><td>드래곤 라이더, 세르프</td></tr>
-<tr><td>전신 갑옷 행운 주문서 100% </td><td>혼테일, 쿨리 좀비, 블루 드래곤터틀, 다크 레쉬, 달곰, 주니어 루이넬</td></tr>
-<tr><td>전신 갑옷 행운 주문서 60% </td><td>레드 와이번, 오버로드A, 그리프, 피아누스, 키메라, 제노, 렉스, 타이머, 세르프, 스켈레톤 지휘관, 다일</td></tr>
-<tr><td>전신 갑옷 힘 주문서 10%</td><td>스켈레곤, 로비, 드래곤 라이더, 피아누스, 딥 버푼, 천록, 초록 왕도깨비</td></tr>
-<tr><td>전신 갑옷 힘 주문서 100% </td><td>스켈로스, 소울테니, 큐브슬라임, 플라티안, 크립</td></tr>
-<tr><td>전신 갑옷 힘 주문서 60% </td><td>도도, 시간의 눈, 애프터로드, 그리프, 피아누스, 키메라</td></tr>
-<tr><td>투구 민첩 주문서 10%</td><td>암슈트D, 웨어울프, 기간틱 바이킹, 마스터 데스테니, 자쿰, 달곰, 렉스, 울트라 그레이, 다일</td></tr>
-<tr><td>투구 민첩 주문서 100% </td><td>강화된 미스릴 뮤테, 다크 주니어 예티, 크로코, 아이언 호그, 주니어 레이스</td></tr>
-<tr><td>투구 민첩 주문서 60%</td><td>도도, 추억의 사제, 파워암슈트A, 마이너 좀비, 크림슨 발록, 원로 그레이, 마스터 크로노스, 세르프, 월묘</td></tr>
-<tr><td>투구 방어력 주문서 10%</td><td>레드 슬라임, 그리프, 드래고니카, 캡틴, 크림슨 발록, 레쉬, 데비존, 엘리쟈, 화이트예티와 페페킹, 마노, 달팽이</td></tr>
-<tr><td>투구 방어력 주문서 60%</td><td>블루 와이번, 그린코니언, 대왕지네, 단지, 미스릴 뮤테, 별다람쥐, 푸퍼, 데비존, 엘리쟈, 씨코, 다크 드레이크, 화이트예티와 페페킹, 콜드아이, 머쉬맘, 마노</td></tr>
-<tr><td>투구 지력 주문서 10%</td><td>프로토타입로드, 쿨리 좀비, 스노우맨, 블러드 하프, 자쿰, D.로이, 훈련용 짚인형, 레이스</td></tr>
-<tr><td>투구 지력 주문서 100%</td><td>초록 왕도깨비, 화이트팽, 다크 드레이크, 로랑, 머쉬맘, 스티지</td></tr>
-<tr><td>투구 지력 주문서 60%</td><td>도도, 추억의 수호대장, 예티와 페페, 기간틱 바이킹, 데스테니, 호문쿨루, 태륜, 구미호, 카파 드레이크</td></tr>
-<tr><td>투구 체력 주문서 10%</td><td>그리프, 드래고니카, 크림슨 발록, 태륜, 주니어 레이스</td></tr>
-<tr><td>투구 체력 주문서 100%</td><td>무루</td></tr>
-<tr><td>투구 체력 주문서 60%</td><td>뉴트주니어, 푸른 켄타우로스, 대왕지네, 이끼 달팽이, 요괴선사, 데우, 렉스, 프랑켄로이드, 마스터 로보, 깨비, 고급 앰프, 싸구려 앰프, 락 스피릿, 흘러간 가요 CD, 최신곡 CD, 남자 마네킹, 여자 마네킹, 아이 마네킹, 블루 퍼퓸, 옐로우 퍼퓸, 핑크 퍼퓸, 멜론맛 버블티, 망고맛 버블티, 체리맛 버블티, 그레이예티와 페페킹, 킹크랑, 다일, 머쉬맘</td></tr>
-<tr><td>펫장비 이동속도 주문서 10%</td><td>렉스, 킹 블록퍼스, 다일, 주니어 레이스</td></tr>
-<tr><td>펫장비 이동속도 주문서 100%</td><td>좌절한 초록버섯, 초록버섯, 무루무루</td></tr>
-<tr><td>펫장비 이동속도 주문서 60%</td><td>망둥이, 목도리 프릴드, 킹크랑, 좀비 머쉬맘, 히죽대는 고스텀프, 고스텀프, 버블링</td></tr>
-<tr><td>펫장비 점프력 주문서 10%</td><td>태륜, 로랑</td></tr>
-<tr><td>펫장비 점프력 주문서 100%</td><td>주니어 네키</td></tr>
-<tr><td>펫장비 점프력 주문서 60% </td><td>검은 켄타우로스, 흑저, 스파커, 좀비 머쉬맘, 스티지</td></tr>
-<tr><td>하의 민첩 주문서 10%</td><td>스켈레곤, 스퀴드, 트리로드, 렉스, 타이머, 킹 블록골렘, 다일</td></tr>
-<tr><td>하의 민첩 주문서 100%</td><td>오버로드B, 주니어 불독, 다크 클라크, 레쉬, 핀붐, 다크 리티</td></tr>
-<tr><td>하의 민첩 주문서 60%</td><td>혼테일, 예티와 페페, 다크 레쉬, 비틀, 구미호, 다크 드레이크</td></tr>
-<tr><td>하의 방어력 주문서 10%</td><td>리스튼, 게이트키퍼, 그리프, 드래고니카, 크림슨 발록, 로보토이, 구미호, 골드예티와 페페킹, 스텀피, 슬라임</td></tr>
-<tr><td>하의 방어력 주문서 60%</td><td>스노우맨, 데스테니, 대왕지네, 스퀴드, 요괴선사, 흰 모래토끼, 데비존, 파란 왕도깨비, 크립, 그린 트릭스터, 화이트예티와 페페킹, 머쉬맘, 마노</td></tr>
-<tr><td>하의 점프 주문서 10%</td><td>암슈트A, 이루워터, 다크 예티와 페페, 듀얼 파이렛, 요괴선사, 훈련용 나무인형, 원로 그레이, 머쉬맘</td></tr>
-<tr><td>하의 점프 주문서 100%</td><td>비급, 마스터 크로노스, 더키 패밀리, 씨클, 주니어 네키</td></tr>
-<tr><td>하의 점프 주문서 60%</td><td>다크코니언, 불독, 레드 슬라임, 실버 슬라임, 그리프, 스퀴드, 킹 블록골렘, 다크 스톤골렘, 머쉬맘, 무루파</td></tr>
-<tr><td>하의 체력 주문서 10%</td><td>오버로드B, 붉은 켄타우로스, 다크 클라크, 레이지 버피, 삼단지, 판다곰, 주니어 발록</td></tr>
-<tr><td>하의 체력 주문서 100%</td><td>마스터 소울테니, 푸퍼, 파란 왕도깨비, 다크 페페, 스톤볼</td></tr>
-<tr><td>하의 체력 주문서 60%</td><td>리스튼, 피아누스, 호문쿨루, 사이티, 호걸, 카파 드레이크</td></tr>
+    <h2>의존관계 주입(Dependency Injection) 방법</h2>
+    <p>스프링에서 의존관계 주입 방법은 크게 4가지가 있지만 스프링에서 권장하는 방식인 <strong>생성자 주입</strong> 방식만 잘 알고있으면 됩니다.</p>
+    <ul>
+        <li>생성자 주입</li>
+        <li>수정자 주입(setter 주입)</li>
+        <li>필드 주입</li>
+        <li>일반 메서드 주입</li>
 
+    </ul>
+    <p>&nbsp;</p>
+    <h3>예제 코드</h3>
+    <p>생성자 주입의 특징은 생성자 호출시점에 단 한 번만 호출되는 것이 보장되고 불변, 필수적인 의존관계에 사용합니다. 단일 생성자만 있다면 <code>@Autowired</code>는 생략할 수 있습니다.
+    </p>
+    <pre><code class='language-java' lang='java'>@Service
+public class UserServiceImpl implements UserService {
 
+    private final UserRepository userRepository;
 
-</tbody>
-</table>
+    // @Autowired 생략가능
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+	...
+	...
+}
+</code></pre>
+    <p>&nbsp;</p>
+    <h3>생성자 주입 방식을 사용하는 이유</h3>
+    <ul>
+        <li>대부분의 의존관계는 애플리케이션 종료시까지 변경될 일이 없는것이 좋다.</li>
+        <li>수정자 주입은 public 메서드를 사용하기 때문에 외부에서 변경이 가능하므로 실수를 유발할수 있다.</li>
+        <li>생성자주입은 객체 생성시 한번만 호출되므로 불변하게 설계하는것이 가능하다.</li>
+        <li>생성자 주입시 final키워드를 사용하므로 실수로인한 컴파일 오류를 파악할수 있다.</li>
+
+    </ul>
+    <p>결론적으로 생성자 주입을 선택하는 가장 큰 이유는 스프링 프레임워크에 의존하지 않고 순수 자바언어의 특징을 살리는 방법이기 때문입니다.</p>
+    <p>&nbsp;</p>
+    <h3>생성자 주입 사용 방법</h3>
+    <p>위 예제코드에서 볼수 있듯이 Spring 4.3버전 이후로 클래스에 단일 생성자만 존재하면 @Autowired 어노테이션을 생략하더라도 Bean 객체로 등록되고 Lombok 라이브러리에서 제공하는
+        <code>@RequiredArgsConstructor</code> 어노테이션을 사용한다면 <code>final</code>로 선언된 필드와 <code>@NonNull</code>이 붙은 필드에 대해
+        생성자를 생성합니다.</p>
+    <pre><code class='language-java' lang='java'>@Service
+@RequiredArgsConstructor
+public class UserServiceImpl implements UserService {
+
+    private final UserRepository userRepository;
+	...
+	...
+}
+</code></pre>
+    <p>&nbsp;</p>
+    <h2>Bean 객체 중복 방지</h2>
+    <p>예제 코드로 Bean 객체가 중복 되는 상황에 대해 알아보겠습니다. 아래의 코드를 보면 Bean 객체인 DiscountPolicy를 OrderService 클래스에서 호출하고 있는데
+        DiscountPolicy 인터페이스는 RateDiscountPolicy, FixDiscountPolicy 클래서에서 상속되고 있습니다.</p>
+    <pre><code class='language-java' lang='java'>@Component
+@RequiredArgsConstructor
+public class OrderService {
+
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+}
+</code></pre>
+    <pre><code class='language-java' lang='java'>@Component
+public class RateDiscountPolicy implements DiscountPolicy {
+	...
+}
+...
+@Component
+public class FixDiscountPolicy implements DiscountPolicy {
+	...
+}
+</code></pre>
+    <p>&nbsp;</p>
+    <pre><code>NoUniqueBeanDefinitionException: No qualifying bean of type &#39;com.example.springdemostudy.discount.DiscountPolicy&#39; available: expected single matching bean but found 2: fixDiscountPolicy,rateDiscountPolicy
+</code></pre>
+    <p>RateDiscountPolicy, FixDiscountPolicy 두 클래스는 스프링 컨테이너에서 동일하게 DiscountPolicy 타입의 Bean객체로 관리 되는데 OrderService 클래스에서
+        Bean 객체 호출시 둘중에 어떤 Bean객체를 사용할건지 명시하지 않았기 때문에 오류가 발생합니다.</p>
+    <p>Bean객체를 명시적으로 호출하기 위해서는 필드명 매칭과 @Qualifier, @Primary 어노테이션을 사용하는 방법이 있습니다.</p>
+    <p>&nbsp;</p>
+    <h3>필드명 매칭</h3>
+    <p>같은 타입의 Bean 객체가 중복으로 스프링 컨테이너에 등록될경우 객체 타입을 먼저 매칭하고 중복발생시 필드명 매칭을 시도합니다.</p>
+    <pre><code class='language-java' lang='java'>@Component
+@RequiredArgsConstructor
+public class OrderService {
+
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy rateDiscountPolicy; // =&gt; RateDiscountPolicy
+}
+</code></pre>
+    <p>&nbsp;</p>
+    <h3>@Qualifier</h3>
+    <p>필드명 매칭 방식은 코드는 간결하지만 만약 필드명이 변경될경우 참조하는곳을 모두 수정해야 하는 불편함이 있습니다. @Qualifier 어노테이션은 필드명 변경과 무관하게 명시적으로 의존관계를 주입할
+        Bean 객체를 지정합니다.</p>
+    <pre><code class='language-java' lang='java'>@Component
+@Qualifier(&quot;mainDiscountPolicy&quot;)
+public class RateDiscountPolicy implements DiscountPolicy {
+	...
+}
+
+@Component
+@Qualifier(&quot;fixDiscountPolicy&quot;)
+public class FixDiscountPolicy implements DiscountPolicy {
+	...
+}
+</code></pre>
+    <pre><code class='language-java' lang='java'>@Component
+public class OrderServiceImpl implements OrderService {
+
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+
+    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier(&quot;mainDiscountPolicy&quot;) DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
+	...
+}
+</code></pre>
+    <p>RateDiscountPolicy 클래스 @Qualifier 애노테이션에 <code>mainDiscountPolicy</code>구분자를 지정하였고 의존관계를 주입받는 OrderServiceImpl
+        클래스의 생성자 메서드에서 DiscountPolicy 객체 앞에 <code>@Qualifier(&quot;mainDiscountPolicy&quot;)</code>를 붙여서 의존관계를 주입받습니다.
+    </p>
+    <p>주의할점은 생성자 생성자에 @Qualifier(&quot;mainDiscountPolicy&quot;)를 지정해도 @Qualifier를 사용한 클래스가 없어서 찾지 못할경우 스프링 빈에서
+        mainDiscountPolicy 이름을 찾아 주입받게 되는데 이는 의도하지 않은 의존관계 주입을 발생시킬수 있습니다. 따라서 반드시 매칭되도록 구분자를 명시해야 합니다.</p>
+    <p>&nbsp;</p>
+    <h3>@Primary</h3>
+    <p>@Primary 어노테이션을 선언하면 스프링 컨테이너에서 해당 Bean 객체를 우선적으로 의존관계 주입 받을수 있도록 합니다. @Qualifier는 구분자 이름도 지정해야하고 생성자 파라미터에 명시적으로
+        선언해야 하지만 @Primary는 편리하게 사용할수 있다는 장점이 있습니다.</p>
+    <pre><code class='language-java' lang='java'>@Component
+@Primary
+public class RateDiscountPolicy implements DiscountPolicy {
+	...
+}
+...
+@Component
+public class FixDiscountPolicy implements DiscountPolicy {
+	...
+}
+</code></pre>
+    <pre><code class='language-java' lang='java'>@Component
+@RequiredArgsConstructor
+public class OrderServiceImpl implements OrderService {
+
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+	...
+}
+</code></pre>
+    <p><code>@Primary</code>가 선언된 RateDiscountPolicy 클래스가 우선적으로 의존관계 주입에 사용됩니다.</p>
+    <p>&nbsp;</p>
+
 </div>
