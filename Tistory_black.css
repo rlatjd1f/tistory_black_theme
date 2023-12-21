@@ -1171,9 +1171,10 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	max-width: 1080px;
 	margin: 0 auto;
 	font-weight: 300;
-	font-size: 2.125em;
+	font-size: 2.2em;
 	line-height: 1.2352;
 	color: #fff;
+	font-family: 'ROKABold'
 }
 .post-cover a {
 	text-decoration: none;
@@ -1206,8 +1207,9 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 .post-header {padding-top: 4px;}
 .post-header h1 {
 	margin-bottom: 18px;
-	font-size: 1em;
+	font-size: 1.25em;
 	line-height: 1.375;
+	font-family: 'Hahmlet-Bold';
 }
 #tt-body-archive .post-header span:before {content: "'";}
 #tt-body-archive .post-header span:after {content: "' 에 등록된 글";}
@@ -2055,17 +2057,22 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 }
 .sidebar .post-list h2 {
 	margin-bottom: 12px;
+	font-family: 'Hahmlet-Bold';
+	font-size: 1.3rem;
 }
 .sidebar .post-list ul li {
 	overflow: hidden;
-	margin-bottom: 18px;
-	padding: 0;
+	margin-bottom: 10px;
+	padding: 5px;
+	border: solid white 2px;
 }
 .sidebar .post-list ul li img {
 	float: right;
 	width: 58px;
 	height: 58px;
 	margin: 2px 0 0 20px;
+	background-color: white;
+	padding: 3px;
 }
 .sidebar .post-list ul li a {
 	display: block;
@@ -2219,10 +2226,10 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	background-position-y: -150px;
 }
 .sidebar .tab-ui h2 a {
-	color: #f2f2f2;
+	color: white;
 }
 .sidebar .tab-ui h2 a.current {
-	color: white;
+	color: gold;
 }
 .sidebar .tab-ui h2 a:before {
 	content: "";
@@ -2361,7 +2368,9 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	float: none;
 	overflow: hidden;
 	width: 100%;
-	margin: 0 0 28px;
+	margin: 0 0 15px;
+	padding-bottom: 15px;
+	border-bottom: solid 2px white;
 }
 .list-type-thumbnail .post-item .thum {
 	display: inline;
@@ -2394,7 +2403,9 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	max-width: 95%;
 	margin-bottom: 12px;
 	padding-top: 7px;
-	font-size: 1.25em;
+	font-size: 1.3em;
+	font-family: 'ROKABold';
+	color: gold;
 }
 .list-type-thumbnail .post-item .excerpt {
 	overflow: hidden;
