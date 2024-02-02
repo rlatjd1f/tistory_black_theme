@@ -3375,44 +3375,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 .markdown-body img {
   border-style: none;
 }
-
-.markdown-body pre {
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-.markdown-body pre code {
-	font-size: 0.95rem;
-	font-family: 'D2Coding';
-	display: inline;
-	padding: 0;
-	margin: 0;
-	overflow: visible;
-	line-height: inherit;
-	word-wrap: normal;
-	background-color: initial;
-	border: 0;
-}
-
-.markdown-body .highlight pre,
-.markdown-body pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
-}
-
-.markdown-body code {
-	font-size: 1rem;
-	font-family: 'D2Coding';
-	padding: 0.2rem;
-	margin: 0 0.2rem 0 0;
-	background-color: white;
-	border-radius: 3px;
-	color: black;
-}
   
 .markdown-body b {
 	color: #fa3425;
@@ -3486,11 +3448,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 .markdown-body table {
   border-spacing: 0;
   border-collapse: collapse;
-}
-
-.markdown-body td,
-.markdown-body th {
-  padding: 0;
 }
 
 .markdown-body details summary {
@@ -3973,15 +3930,16 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 }
 
 .markdown-body table thead tr th{
-	background-color: #2780d4;
+	background-color: darkgreen;
 	color: #fff;
 	font-weight: normal;
-	font-size: 1em;
+	font-size: 1.05em;
 }
 
 .markdown-body table td,
 .markdown-body table th {
   padding: 5px;
+  height: 45px;
   border: 1px solid #dfe2e5;
 }
 
@@ -4182,4 +4140,33 @@ body .another_category * {
 /* 구독 버튼 */
 .menu_toolbar .txt_tool_id {
 	color: black;
+}
+
+/* 일반 코드 */
+pre code.hljs {
+	border-left: black solid 10px;
+	font-family: 'D2Coding';
+	line-height: 1.25em;
+}
+
+/* 플레인 텍스트 코드 */
+pre .plaintext {
+	background-color: black;
+	padding: 10px;
+}
+
+pre .plaintext code {
+	border-left: black solid 10px;
+	font-family: 'D2Coding';
+	line-height: 1.25em;
+}
+
+/* 하이라이트 코드 */
+p code {
+	background-color: white;
+	color: black;
+	border-radius: 5px;
+	font-family: 'D2Coding';
+	padding: 0 5px 0 5px;
+	margin-right: 5px;
 }
