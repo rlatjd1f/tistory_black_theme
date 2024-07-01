@@ -2292,38 +2292,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	overflow: hidden;
 }
 
-/* Overwrite */
-#content .another_category {
-	margin: 60px 0 57px !important;
-	padding: 16px 20px 14px;
-}
-#content .another_category h4 {
-	margin: 0 0 13px !important;;
-	padding: 0 !important;
-	border-bottom: 0 !important;
-	font-size: 0.875em !important;
-	color: white;
-}
-#content .another_category table {
-	margin: 0 !important;
-	border: 0;
-}
-#content .another_category th {
-	padding: 2px 0 !important;
-	font-size: 0.875rem !important;
-}
-#content .another_category th a.current {
-	text-decoration: underline !important;
-	font-weight: 400;
-	color: white !important;
-	border: 0 !important;
-}
-#content .another_category td {
-	padding: 2px 0 !important;
-	border: 0;
-	font-size: 0.75rem !important;
-}
-
 .container_postbtn {
 	margin: 53px 0 55px;
 	padding: 0 !important;
@@ -3099,10 +3067,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 		width: 163px;
 	}
 
-	#content .another_category {
-		margin: 40px 0 37px !important;
-	}
-
 	.container_postbtn {
 		margin: 35px 0 37px;
 	}
@@ -3228,13 +3192,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	#tt-body-index.promotion-mobile-hide .main-slider {
 		display: none;
 	}
-
-	#content .another_category th {
-		overflow: hidden;
-		display: -webkit-box;
-		-webkit-line-clamp: 1;
-		-webkit-box-orient: vertical;
-	}
 }
 
 @media screen and (max-width: 767px){
@@ -3257,12 +3214,30 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 }
 
 /* 카테고리 글 더보기 */
-body .another_category,
-body .another_category h4, 
-body .another_category h4 a,
-body .another_category * {
-    color: white !important; /* 폰트 색상 */
-    border-color:white !important; /* 테두리 색상 */
+body .another_category h4 {
+	border-bottom-width: 0 !important;
+}
+
+body .another_category table tr {
+	background-color: transparent !important; /* 배경색 */
+}
+
+body .another_category table tr:nth-child(2n) {
+	background-color: transparent !important; /* 배경색 */
+}
+
+body .another_category table th * {
+	color: white !important;
+}
+
+body .another_category table th a {
+	margin-left: 20px !important;
+	border-bottom: solid 1px greenyellow !important;
+	font-size: 1.15em !important;
+}
+
+body .another_category table td {
+	display: none !important;
 }
 
 /* 구독 버튼 */
