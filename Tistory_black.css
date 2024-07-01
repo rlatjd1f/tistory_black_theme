@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url('//fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+
 /*
  *
  * CSS CONTENTS:
@@ -60,7 +62,6 @@
     font-style: normal;
 }
 
-@import url('//fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
 /* Type Selector Reset */
 body {
 	-webkit-text-size-adjust: 100%;
@@ -167,7 +168,7 @@ a:active {text-decoration:none;}
 }
 #header h1 {
 	padding: 23px 0 ;
-	font-family: 'Hahmlet-Bold';
+	font-family: 'Hahmlet-Bold', sans-serif;
 	font-weight: 800;
 	font-size: 1.75em;
 	line-height: 32px;
@@ -282,7 +283,7 @@ a:active {text-decoration:none;}
 	overflow: hidden;
 	width: 32px;
 	height: 32px;
-	border: 0px solid #eee;
+	border: 0 solid #eee;
 	border-radius: 50%;
 }
 #header .util .profile img {
@@ -498,7 +499,7 @@ a:active {text-decoration:none;}
 	padding-top: 339px;
 }
 #tt-body-page blockquote {
-	margin: 10px 0px 10px 0px;
+	margin: 10px 0;
 }
 #tt-body-page.post-cover-hide #container {
 	padding-top: 0;
@@ -528,7 +529,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-title,
 
 figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 #tt-body-page figure[data-ke-type='opengraph'] div.og-text p.og-desc {
-	margin: 0px;
+	margin: 0;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	font-family: 'Noto Sans DemiLight', 'Noto Sans KR', sans-serif;
@@ -1174,7 +1175,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	font-size: 2.2em;
 	line-height: 1.2352;
 	color: #fff;
-	font-family: 'ROKABold'
+	font-family: 'ROKABold', sans-serif;
 }
 .post-cover a {
 	text-decoration: none;
@@ -1209,7 +1210,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	margin-bottom: 18px;
 	font-size: 1.25em;
 	line-height: 1.375;
-	font-family: 'Hahmlet-Bold';
+	font-family: 'Hahmlet-Bold', sans-serif;
 }
 #tt-body-archive .post-header span:before {content: "'";}
 #tt-body-archive .post-header span:after {content: "' 에 등록된 글";}
@@ -1553,6 +1554,9 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	line-height: 2;
 	color: white;
 }
+.entry-content p strong {
+	margin-bottom: 5px;
+}
 .entry-content p img {
 	max-width: 100%;
 	height: auto;
@@ -1585,21 +1589,22 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 }
 .entry-content ol {
 	list-style: decimal;
+	margin-left: 40px;
 }
 .entry-content ul li {
 	position: relative;
 	margin-bottom: 10px;
-	padding-left: 0px;
+	padding-left: 0;
 	color: white;
-	text-indent: 0px;
+	text-indent: 0;
 	list-style: inherit;
 }
 .entry-content ol li {
 	position: relative;
 	margin-bottom: 10px;
-	padding-left: 0px;
+	padding-left: 0;
 	color: white;
-	text-indent: 0px;
+	text-indent: 0;
 	list-style: inherit;
 }
 .entry-content ul code,
@@ -1617,7 +1622,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	border-left: 4px solid #e6e6e6;
 }
 .entry-content blockquote p {
-	margin: 0px 0 0;
+	margin: 0;
 }
 .entry-content blockquote p:first-child {
 	margin-top: 0;
@@ -1628,7 +1633,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	width: 100%;
 	overflow: auto;
 	border-collapse: collapse;
-	border: 1;
+	border: 1px;
 }
 
 .entry-content table thead tr th{
@@ -1806,7 +1811,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	float: left;
 	width: 46px;
 	margin: -2px 0 0 -60px;
-	border: 0px solid #eee;
+	border: 0 solid #eee;
 	border-radius: 50%;
 }
 .comment-list ul li .author-meta .control {
@@ -1869,7 +1874,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 .comment-list ul li ul {
 	margin: 28px 0 -32px 0;
 	padding: 26px 0 21px;
-	border-top: 0px solid #eee;
+	border-top: 0 solid #eee;
 	background-color: #202124;
 }
 .comment-list ul li ul li {
@@ -2011,7 +2016,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	margin-bottom: 36px;
 	border: solid 2px gray;
 	padding: 15px 0 15px 15px;
-	font-family: 'Hahmlet-Bold';
+	font-family: 'Hahmlet-Bold', sans-serif;
 	/* width: 268px; */
 }
 .sidebar .category ul li {
@@ -2080,7 +2085,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 }
 .sidebar .post-list h2 {
 	margin-bottom: 12px;
-	font-family: 'Hahmlet-Bold';
+	font-family: 'Hahmlet-Bold', sans-serif;
 	font-size: 1.3rem;
 }
 .sidebar .post-list ul li {
@@ -2412,7 +2417,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	padding: 8px;
 	transform: translateY(0);
 	-webkit-transform: translateY(0);
-	-ms-transform: translateY();
+	-ms-transform: translateY(0);
 }
 .list-type-thumbnail .post-item.protected .thum {
 	float: right;
@@ -2427,7 +2432,7 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	margin-bottom: 12px;
 	padding-top: 7px;
 	font-size: 1.3em;
-	font-family: 'ROKABold';
+	font-family: 'ROKABold', sans-serif;
 	color: gold;
 }
 .list-type-thumbnail .post-item .excerpt {
@@ -3087,10 +3092,6 @@ figure[data-ke-type='opengraph'] div.og-text p.og-desc,
 	.entry-content {
 		padding: 0 24px;
 	}
-	.entry-content p {
-		margin-bottom: 22px;
-		line-height: 1.625rem;
-	}
 	.entry-content figure {
 		margin-top: 6px !important;
 	}
@@ -3272,7 +3273,7 @@ body .another_category * {
 /* 일반 코드 */
 pre code.hljs {
 	border-left: black solid 10px;
-	font-family: 'D2Coding';
+	font-family: 'D2Coding', sans-serif;
 	line-height: 1.25em;
 }
 
@@ -3284,7 +3285,7 @@ pre .plaintext {
 
 pre .plaintext code {
 	border-left: black solid 10px;
-	font-family: 'D2Coding';
+	font-family: 'D2Coding', sans-serif;
 	line-height: 1.25em;
 }
 
@@ -3293,7 +3294,7 @@ p code {
 	background-color: white;
 	color: black;
 	border-radius: 5px;
-	font-family: 'D2Coding';
+	font-family: 'D2Coding', sans-serif;
 	padding: 0 5px 0 5px;
 	margin-right: 5px;
 }
